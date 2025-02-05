@@ -31,10 +31,8 @@ const Game: React.FC = () => {
   const [showArrow, setShowArrow] = useState(false);
   const chargeIntervalRef = useRef<NodeJS.Timeout>();
   const [gameResult, setGameResult] = useState<string | null>(null);
-
   const ballRef = useRef<THREE.Group>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
-
   const [cameraConfig, setCameraConfig] = useState<CameraConfig>({
     distance: GAME_SETTINGS.CAMERA.DEFAULT.DISTANCE,
     height: GAME_SETTINGS.CAMERA.DEFAULT.HEIGHT,
@@ -49,11 +47,9 @@ const Game: React.FC = () => {
     zoom: GAME_SETTINGS.CAMERA.DEFAULT.ZOOM,
     perspective: GAME_SETTINGS.CAMERA.DEFAULT.PERSPECTIVE
   });
-
   const initialBallPosition = useMemo(() => {
     return new THREE.Vector3(0, 0, -1);
   }, []);
-
   const [debugLabels, setDebugLabels] = useState<PointLabel[]>([]);
 
   useEffect(() => {
@@ -108,7 +104,6 @@ const Game: React.FC = () => {
     };
   }, [isChargingShot, shotPower, isBallActive, shotDirection]);
 
-
   const handleGoalOutcome = useCallback((isGoal: boolean) => {
     setScore(prev => ({
       ...prev,
@@ -118,7 +113,6 @@ const Game: React.FC = () => {
     // Oyun sonucunu ayarlayın
     handleGameEnd(isGoal ? 'GOL! 🥅' : 'Kurtarma! 🧤');
   }, []);
-
   const handleShoot = useCallback((power: number) => {
     if (!ballRef.current) return;
 
@@ -137,17 +131,14 @@ const Game: React.FC = () => {
 
     setIsBallActive(true);
   }, [shotDirection]);
-
   const handleBallPositionUpdate = useCallback((position: THREE.Vector3) => {
     // Gerekirse top pozisyonu güncellemesi için kod eklenebilir
   }, []);
-
   const resetBall = () => {
     if (ballRef.current) {
       ballRef.current.position.copy(initialBallPosition);
     }
   };
-
   const handleCameraConfigChange = (newConfig: CameraConfig) => {
     // Kamera pozisyonunu dinamik olarak güncelle
     const updatedConfig = {
@@ -169,13 +160,11 @@ const Game: React.FC = () => {
     // Konsola debug bilgisi
     //console.log('Kamera Ayarları Güncellendi:', updatedConfig);
   };
-
   const handleGameEnd = (result: string) => {
     if (result) {
       setGameResult(result); // Sadece geçerli bir sonuç ayarlayın
     }
   };
-
   const showGameResultAlert = (result: string) => {
     Swal.fire({
       title: 'Oyun Sonucu',
@@ -184,7 +173,6 @@ const Game: React.FC = () => {
       confirmButtonText: 'Tamam'
     });
   };
-
   const CameraSetup = () => {
     const { camera } = useThree();
     const ballRef = useRef<THREE.Mesh | null>(null);
@@ -323,7 +311,6 @@ const Game: React.FC = () => {
 
     console.table(performanceMetrics);
   };
-
 
   return (
     <div className="game-container" style={{ width: '100%', height: '100vh', position: 'relative' }}>

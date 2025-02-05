@@ -308,16 +308,13 @@ const Ball = React.forwardRef<THREE.Group, BallProps>((props, ref) => {
     <group
       ref={(group) => {
         if (group) {
-          // ballRef için özel bir işleyici kullan
           const mutableRef = ballRef as { current: THREE.Group | null };
           mutableRef.current = group;
 
-          // Dış ref için tip dönüşümü
           const meshGroup = group as unknown as THREE.Group;
           if (typeof ref === 'function') {
             ref(meshGroup);
           } else if (ref) {
-            // Dış ref için de özel işleyici
             const mutableExtRef = ref as { current: THREE.Group | null };
             mutableExtRef.current = meshGroup;
           }
@@ -326,7 +323,6 @@ const Ball = React.forwardRef<THREE.Group, BallProps>((props, ref) => {
       position={initialPosition}
       scale={[0.22, 0.22, 0.22]}
     >
-      {/* Boş group - scene useEffect'te eklenecek */}
     </group>
   );
 });
