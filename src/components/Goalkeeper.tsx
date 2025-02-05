@@ -224,7 +224,6 @@ const MemoizedGoalkeeper = React.memo(
     const keeperRef = useRef<THREE.Group>(null);
     const trajectoryRef = useRef<THREE.Vector3[]>([]);
     const isMoving = useRef(false);
-
     const [gameStatus, setGameStatus] = useState<GoalkeeperState>('idle');
 
     const { 

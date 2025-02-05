@@ -252,14 +252,12 @@ const Ball = React.forwardRef<THREE.Group, BallProps>((props, ref) => {
   useEffect(() => {
     if (ref && 'current' in ref && ref.current) {
       ref.current.userData.shoot = (horizontalAngle: number, verticalAngle: number, power: number) => {
-        const MAX_SHOT_SPEED = 50; // Maksimum şut hızı
-        const MIN_SHOT_SPEED = 10;  // Minimum şut hızı
+        const MAX_SHOT_SPEED = 50;
+        const MIN_SHOT_SPEED = 10; 
 
-        // Açıları radyana çevir
-        const hRad = (horizontalAngle * Math.PI) / 180;
-        const vRad = (verticalAngle * Math.PI) / 180;
+        const hRad = (horizontalAngle * Math.PI) / 90;
+        const vRad = (verticalAngle * Math.PI) / 90;
 
-        // Daha basit ve güçlü bir hız hesaplaması
         const shotSpeed = THREE.MathUtils.clamp(
           power * MAX_SHOT_SPEED, 
           MIN_SHOT_SPEED, 
@@ -279,12 +277,11 @@ const Ball = React.forwardRef<THREE.Group, BallProps>((props, ref) => {
   }, [ref]);
 
   useFrame((state, delta) => {
-    if (!ballRef.current || !isShot) return;
+      if (!ballRef.current || !isShot) return;
 
-    const position = ballRef.current.position;
-    const scaledDelta = delta * 0.8;
+      const position = ballRef.current.position;
 
-    position.add(velocityRef.current.clone().multiplyScalar(scaledDelta * 8)); 
+      position.add(velocityRef.current.clone().multiplyScalar(delta * 1)); 
 
     checkGoalInteraction(position);
     updateBallTrajectory(position);

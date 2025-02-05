@@ -97,7 +97,7 @@ export const GAME_SETTINGS = {
     MAX_POWER: 100,              // Maksimum şut gücü
     MIN_POWER: 0,                // Minimum şut gücü
     DEFAULT_POWER: 50,           // Varsayılan şut gücü
-    RESET_DELAY: 3000            // Şut sonrası reset süresi (ms)
+    RESET_DELAY: 1000            // Şut sonrası reset süresi (ms)
   },
   GOALKEEPER: {
     DEFAULT_REACTION_TIME: 700,  // Kaleci tepki süresi (ms)
