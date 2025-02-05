@@ -1,0 +1,8 @@
+{
+  "short_name": "GS Penalty Game",
+  "name": "Galatasaray Penalty Game",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+} 

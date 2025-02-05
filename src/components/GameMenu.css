@@ -1,0 +1,151 @@
+.game-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 240px;
+}
+
+.logo-container .logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1px;
+}
+
+.logo-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.logo-container h1 span {
+  color: #e74c3c;
+}
+
+.menu-buttons, .instructions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.menu-buttons button, .instructions-panel button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.instructions-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.settings-button {
+  background-color: #f39c12;
+  color: white;
+}
+
+.back-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.menu-buttons button:hover, .instructions-panel button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.instructions-panel ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.instructions-panel li {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.background-ball {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.background-ball img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.camera-config-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.camera-config-footer .config-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera-config-footer .input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.camera-config-footer label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera-config-footer input {
+  width: 70px;
+  margin-top: 5px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 2px;
+}

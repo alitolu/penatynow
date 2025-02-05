@@ -1,0 +1,6 @@
+{
+    "CodeGPT.Autocomplete.provider": "Ollama - deepseek-coder:base",
+    "CodeGPT.Autocomplete.enabled": true,
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "CodeGPT.query.language": "Turkish"
+}

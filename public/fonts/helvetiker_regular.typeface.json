@@ -1,0 +1,26 @@
+{
+  "glyphs": {
+    "0": {"ha": 556, "x_min": 0, "x_max": 556, "o": "M 556 342 Q 556 171 463 85 Q 370 0 278 0 Q 185 0 93 85 Q 0 171 0 342 Q 0 513 93 599 Q 185 684 278 684 Q 370 684 463 599 Q 556 513 556 342 Z M 463 342 Q 463 485 389 556 Q 315 627 278 627 Q 241 627 167 556 Q 93 485 93 342 Q 93 199 167 128 Q 241 57 278 57 Q 315 57 389 128 Q 463 199 463 342 Z"},
+    "1": {"ha": 556, "x_min": 0, "x_max": 556, "o": "M 556 0 L 463 0 L 463 627 L 93 627 L 93 684 L 556 684 L 556 0 Z"},
+    "2": {"ha": 556, "x_min": 0, "x_max": 556, "o": "M 556 0 L 0 0 L 0 171 L 278 513 Q 370 627 370 684 L 185 684 Q 93 684 93 513 L 0 513 L 0 684 Q 0 855 185 855 L 370 855 Q 556 855 556 684 Q 556 599 463 513 L 185 171 L 556 171 L 556 0 Z"}
+  },
+  "familyName": "Helvetiker",
+  "ascender": 800,
+  "descender": -200,
+  "underlinePosition": -100,
+  "underlineThickness": 50,
+  "boundingBox": {"yMin": -200, "xMin": -50, "yMax": 800, "xMax": 600},
+  "resolution": 1000,
+  "original_font_information": {
+    "format": 0,
+    "copyright": "Copyright (c) 1985, 1987, 1989, 1990, 1997 Adobe Systems Incorporated. All Rights Reserved.",
+    "fontFamily": "Helvetiker",
+    "fontSubfamily": "Regular",
+    "uniqueID": "Adobe:Helvetiker:001.001",
+    "fullName": "Helvetiker",
+    "version": "001.001",
+    "postScriptName": "Helvetiker-Regular"
+  },
+  "cssFontWeight": "normal",
+  "cssFontStyle": "normal"
+}

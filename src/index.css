@@ -1,0 +1,25 @@
+/* SweetAlert2 ve Animasyon Stilleri */
+@import 'sweetalert2/dist/sweetalert2.min.css';
+@import 'animate.css';
+
+.game-result-alert {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.game-result-title {
+  color: #333 !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+.game-result-content {
+  color: #666 !important;
+  font-size: 1rem !important;
+}
+
+/* Animasyon Geçişleri */
+.swal2-popup.animate__animated {
+  animation-duration: 0.5s !important;
+}
