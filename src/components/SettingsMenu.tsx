@@ -20,7 +20,7 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({
   initialSettings = {
     sound: 50,
     music: 50,
-    graphics: 'medium' as 'low' | 'medium' | 'high'
+    graphics: 'medium'
   },
   onSettingsChange 
 }) => {

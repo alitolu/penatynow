@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { Difficulty } from '../constants/gameConstants';
 
 const BackgroundAnimation = styled(motion.div)`
   position: fixed;
@@ -108,7 +107,7 @@ const MainMenu: React.FC<MainMenuProps> = ({
   onClose,
   onOpenCameraSettings 
 }) => {
-  const [selectedDifficulty, setSelectedDifficulty] = React.useState<Difficulty>('medium');
+  const [selectedDifficulty, setSelectedDifficulty] = React.useState<'easy' | 'medium' | 'hard'>('medium');
 
   const buttonVariants = {
     initial: { opacity: 0, y: 50, scale: 0.8 },

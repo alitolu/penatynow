@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './GameMenu.css';
-import { Difficulty } from '../constants/gameConstants';
 
 interface GameMenuProps {
   onClose: () => void;
@@ -16,7 +15,7 @@ const GameMenu: React.FC<GameMenuProps> = ({
   onSettings, 
   onOpenCameraSettings 
 }) => {
-  const [difficulty, setDifficulty] = useState<Difficulty>('medium');
+  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [showInstructions, setShowInstructions] = useState(false);
 
   const handleDifficultyChange = (level: 'easy' | 'medium' | 'hard') => {

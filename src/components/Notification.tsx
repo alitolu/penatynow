@@ -19,7 +19,7 @@ const notificationVariants: Variants = {
 
 const Notification: React.FC<NotificationProps> = ({
   message,
-  type = 'info' as NotificationType,
+  type = 'info',
   duration = 3000,
   onClose,
   id

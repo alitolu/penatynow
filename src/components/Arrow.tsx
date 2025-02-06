@@ -34,9 +34,8 @@ const Arrow: React.FC<ArrowProps> = ({
 
   return (
     <mesh ref={meshRef} position={position} rotation={rotation}>
-      <cylinderGeometry args={[0.05, 0.1, arrowLength, 8]} />
       <meshStandardMaterial color={arrowColor} transparent opacity={arrowOpacity} /> {/* Renk ve opaklık ayarlanabilir */}
-      <mesh position={[0, arrowLength / 2, 0]} rotation={[Math.PI / 2, 0, 0]}>
+          <mesh position={position} rotation={[Math.PI / 2, 0, 0]}>
         <coneGeometry args={[0.1, 0.2, 8]} />
         <meshStandardMaterial color={arrowColor} transparent opacity={arrowOpacity} /> {/* Renk ve opaklık ayarlanabilir */}
       </mesh>

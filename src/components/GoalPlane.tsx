@@ -3,13 +3,12 @@ import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 import { Line, Box } from '@react-three/drei';
 import { SCENE_DIMENSIONS, GOAL_FRAME, isInGoal } from '../constants/gameConstants';
-import { Difficulty } from '../constants/gameConstants';
 
 interface GoalPlaneProps {
   ballPosition: THREE.Vector3;
   onGoal: (goalDetails: GoalDetails) => void;
   onMiss: (missDetails: MissDetails) => void;
-  difficulty?: Difficulty;
+  difficulty?: 'easy' | 'medium' | 'hard';
 }
 
 interface GoalDetails {
@@ -28,7 +27,7 @@ const GoalPlane: React.FC<GoalPlaneProps> = ({
   ballPosition, 
   onGoal, 
   onMiss,
-  difficulty = 'medium' as Difficulty
+  difficulty = 'medium'
 }) => {
   const goalPlaneRef = useRef<THREE.Mesh>(null);
   const [goalTrackingEnabled, setGoalTrackingEnabled] = useState(true);
